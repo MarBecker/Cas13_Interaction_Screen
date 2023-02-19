@@ -1,0 +1,70 @@
+INFO  @ Sat, 12 Mar 2022 21:03:39: Parameters: /Users/mac650/miniconda3/bin/mageck test -k raw_counts_edit.txt -t RPETP2.REP1,RPETP2.REP2 -c RPETP1.REP1,RPETP1.REP2 -n RPE_TP1vsTP2 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Welcome to MAGeCK v0.5.7. Command: test 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Loading count table from raw_counts_edit.txt  
+INFO  @ Sat, 12 Mar 2022 21:03:39: Processing 1 lines.. 
+DEBUG @ Sat, 12 Mar 2022 21:03:39: Parsing error in line 1 (usually the header line). Skip this line. 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Loaded 47726 records. 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Loading R template file: /Users/mac650/miniconda3/lib/python3.6/site-packages/mageck/plot_template.RTemplate. 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Loading R template file: /Users/mac650/miniconda3/lib/python3.6/site-packages/mageck/plot_template_indvgene.RTemplate. 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Loading Rnw template file: /Users/mac650/miniconda3/lib/python3.6/site-packages/mageck/plot_template.Rnw. 
+DEBUG @ Sat, 12 Mar 2022 21:03:39: Setting up the visualization module... 
+DEBUG @ Sat, 12 Mar 2022 21:03:39: Given sample labels: RPETP2.REP1,RPETP2.REP2 
+DEBUG @ Sat, 12 Mar 2022 21:03:39: Converted index: 1 4 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Treatment samples:RPETP2.REP1,RPETP2.REP2 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Treatment sample index:1,4 
+DEBUG @ Sat, 12 Mar 2022 21:03:39: Given sample labels: RPETP1.REP1,RPETP1.REP2 
+DEBUG @ Sat, 12 Mar 2022 21:03:39: Converted index: 0 3 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Control samples:RPETP1.REP1,RPETP1.REP2 
+INFO  @ Sat, 12 Mar 2022 21:03:39: Control sample index:0,3 
+DEBUG @ Sat, 12 Mar 2022 21:03:40: Initial (total) size factor: 1.0370377496530576 0.8547151872706682 1.007864244644275 1.144770612225404 
+DEBUG @ Sat, 12 Mar 2022 21:03:40: Median factor: 0.9324748506352508 0.7634881453643351 1.107898198957904 1.2193662847210303 
+INFO  @ Sat, 12 Mar 2022 21:03:40: Final size factor: 0.9324748506352508 0.7634881453643351 1.107898198957904 1.2193662847210303 
+DEBUG @ Sat, 12 Mar 2022 21:03:41: Adjusted model: 1.07706463054405	1.9277839052032009 
+INFO  @ Sat, 12 Mar 2022 21:03:41: Adjusted variance calculation: 0.0 for raw variance, 1.0 for modeling 
+INFO  @ Sat, 12 Mar 2022 21:03:41: Before RRA, 0 sgRNAs are removed with zero counts in both group(s). 
+INFO  @ Sat, 12 Mar 2022 21:03:41: Use qnorm to reversely calculate sgRNA scores ... 
+DEBUG @ Sat, 12 Mar 2022 21:03:43: lower test FDR cutoff: 0.4590789087709006 
+DEBUG @ Sat, 12 Mar 2022 21:03:43: higher test FDR cutoff: 0.4646942966098144 
+INFO  @ Sat, 12 Mar 2022 21:03:43: Running command: RRA -i RPE_TP1vsTP2.plow.txt -o RPE_TP1vsTP2.gene.low.txt -p 0.4590789087709006 --skip-gene NA --skip-gene na  
+INFO  @ Sat, 12 Mar 2022 21:03:49: Command message: 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Welcome to RRA v 0.5.7. 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Skipping gene NA for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Skipping gene na for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Reading input file... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Summary: 47726 sgRNAs, 4316 genes, 1 lists; skipped sgRNAs:0 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Computing lo-values for each group... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Computing false discovery rate... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Permuting genes with 8 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Permuting genes with 9 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Permuting genes with 72 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Number of genes under FDR adjustment: 4316 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   Saving to output file... 
+INFO  @ Sat, 12 Mar 2022 21:03:49:   RRA completed. 
+INFO  @ Sat, 12 Mar 2022 21:03:49:    
+INFO  @ Sat, 12 Mar 2022 21:03:49: End command message. 
+INFO  @ Sat, 12 Mar 2022 21:03:49: Running command: RRA -i RPE_TP1vsTP2.phigh.txt -o RPE_TP1vsTP2.gene.high.txt -p 0.4646942966098144 --skip-gene NA --skip-gene na  
+INFO  @ Sat, 12 Mar 2022 21:03:54: Command message: 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Welcome to RRA v 0.5.7. 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Skipping gene NA for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Skipping gene na for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Reading input file... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Summary: 47726 sgRNAs, 4316 genes, 1 lists; skipped sgRNAs:0 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Computing lo-values for each group... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Computing false discovery rate... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Permuting genes with 8 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Permuting genes with 9 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Permuting genes with 72 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Number of genes under FDR adjustment: 4316 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   Saving to output file... 
+INFO  @ Sat, 12 Mar 2022 21:03:54:   RRA completed. 
+INFO  @ Sat, 12 Mar 2022 21:03:54:    
+INFO  @ Sat, 12 Mar 2022 21:03:54: End command message. 
+DEBUG @ Sat, 12 Mar 2022 21:03:55: Sorting the merged items by negative selection... 
+INFO  @ Sat, 12 Mar 2022 21:03:55: Loading top 10 genes from RPE_TP1vsTP2.gene.low.txt: FIP1L1control,CPSF6control,HNRNPH1control,controlPABPN1,SMN1control,NCBP1control,controlTRA2B,RNGTTcontrol,controlHNRNPA1,WDR33control 
+DEBUG @ Sat, 12 Mar 2022 21:03:55: Column index:3 
+INFO  @ Sat, 12 Mar 2022 21:03:55: Loading top 10 genes from RPE_TP1vsTP2.gene.high.txt: controlcontrol,TP53control,controlZCCHC8,controlNCBP2,NCBP2control,MOV10control,CDK8control,CDK11Acontrol,DXOcontrol,RNASEH2Acontrol 
+DEBUG @ Sat, 12 Mar 2022 21:03:55: Column index:9 
+INFO  @ Sat, 12 Mar 2022 21:03:56: Running command: rm RPE_TP1vsTP2.plow.txt 
+INFO  @ Sat, 12 Mar 2022 21:03:56: Running command: rm RPE_TP1vsTP2.phigh.txt 
+INFO  @ Sat, 12 Mar 2022 21:03:56: Running command: rm RPE_TP1vsTP2.gene.low.txt 
+INFO  @ Sat, 12 Mar 2022 21:03:56: Running command: rm RPE_TP1vsTP2.gene.high.txt 

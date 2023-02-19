@@ -1,0 +1,70 @@
+INFO  @ Sat, 12 Mar 2022 21:05:01: Parameters: /Users/mac650/miniconda3/bin/mageck test -k raw_counts_edit.txt -t HEKTP2.REP1,HEKTP2.REP2 -c HEKTP1.REP1,HEKTP1.REP2 -n HEK_TP1vsTP2 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Welcome to MAGeCK v0.5.7. Command: test 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Loading count table from raw_counts_edit.txt  
+INFO  @ Sat, 12 Mar 2022 21:05:01: Processing 1 lines.. 
+DEBUG @ Sat, 12 Mar 2022 21:05:01: Parsing error in line 1 (usually the header line). Skip this line. 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Loaded 47726 records. 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Loading R template file: /Users/mac650/miniconda3/lib/python3.6/site-packages/mageck/plot_template.RTemplate. 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Loading R template file: /Users/mac650/miniconda3/lib/python3.6/site-packages/mageck/plot_template_indvgene.RTemplate. 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Loading Rnw template file: /Users/mac650/miniconda3/lib/python3.6/site-packages/mageck/plot_template.Rnw. 
+DEBUG @ Sat, 12 Mar 2022 21:05:01: Setting up the visualization module... 
+DEBUG @ Sat, 12 Mar 2022 21:05:01: Given sample labels: HEKTP2.REP1,HEKTP2.REP2 
+DEBUG @ Sat, 12 Mar 2022 21:05:01: Converted index: 14 17 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Treatment samples:HEKTP2.REP1,HEKTP2.REP2 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Treatment sample index:14,17 
+DEBUG @ Sat, 12 Mar 2022 21:05:01: Given sample labels: HEKTP1.REP1,HEKTP1.REP2 
+DEBUG @ Sat, 12 Mar 2022 21:05:01: Converted index: 12 15 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Control samples:HEKTP1.REP1,HEKTP1.REP2 
+INFO  @ Sat, 12 Mar 2022 21:05:01: Control sample index:12,15 
+DEBUG @ Sat, 12 Mar 2022 21:05:01: Initial (total) size factor: 0.9939034007694478 1.0234765488317847 0.9173106568922733 1.0791434997603597 
+DEBUG @ Sat, 12 Mar 2022 21:05:02: Median factor: 0.9924655116472973 1.0156240669902785 0.9186462510559257 1.074185466982869 
+INFO  @ Sat, 12 Mar 2022 21:05:02: Final size factor: 0.9924655116472973 1.0156240669902785 0.9186462510559257 1.074185466982869 
+DEBUG @ Sat, 12 Mar 2022 21:05:02: Adjusted model: 1.2736988302940166	0 
+INFO  @ Sat, 12 Mar 2022 21:05:03: Adjusted variance calculation: 0.0 for raw variance, 1.0 for modeling 
+INFO  @ Sat, 12 Mar 2022 21:05:03: Before RRA, 0 sgRNAs are removed with zero counts in both group(s). 
+INFO  @ Sat, 12 Mar 2022 21:05:03: Use qnorm to reversely calculate sgRNA scores ... 
+DEBUG @ Sat, 12 Mar 2022 21:05:04: lower test FDR cutoff: 0.4046012655575577 
+DEBUG @ Sat, 12 Mar 2022 21:05:05: higher test FDR cutoff: 0.44269370992750284 
+INFO  @ Sat, 12 Mar 2022 21:05:05: Running command: RRA -i HEK_TP1vsTP2.plow.txt -o HEK_TP1vsTP2.gene.low.txt -p 0.4046012655575577 --skip-gene NA --skip-gene na  
+INFO  @ Sat, 12 Mar 2022 21:05:10: Command message: 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Welcome to RRA v 0.5.7. 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Skipping gene NA for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Skipping gene na for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Reading input file... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Summary: 47726 sgRNAs, 4316 genes, 1 lists; skipped sgRNAs:0 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Computing lo-values for each group... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Computing false discovery rate... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Permuting genes with 8 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Permuting genes with 9 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Permuting genes with 72 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Number of genes under FDR adjustment: 4316 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   Saving to output file... 
+INFO  @ Sat, 12 Mar 2022 21:05:10:   RRA completed. 
+INFO  @ Sat, 12 Mar 2022 21:05:10:    
+INFO  @ Sat, 12 Mar 2022 21:05:10: End command message. 
+INFO  @ Sat, 12 Mar 2022 21:05:10: Running command: RRA -i HEK_TP1vsTP2.phigh.txt -o HEK_TP1vsTP2.gene.high.txt -p 0.44269370992750284 --skip-gene NA --skip-gene na  
+INFO  @ Sat, 12 Mar 2022 21:05:15: Command message: 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Welcome to RRA v 0.5.7. 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Skipping gene NA for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Skipping gene na for permutation ... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Reading input file... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Summary: 47726 sgRNAs, 4316 genes, 1 lists; skipped sgRNAs:0 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Computing lo-values for each group... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Computing false discovery rate... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Permuting genes with 8 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Permuting genes with 9 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Permuting genes with 72 sgRNAs... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Number of genes under FDR adjustment: 4316 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   Saving to output file... 
+INFO  @ Sat, 12 Mar 2022 21:05:15:   RRA completed. 
+INFO  @ Sat, 12 Mar 2022 21:05:15:    
+INFO  @ Sat, 12 Mar 2022 21:05:15: End command message. 
+DEBUG @ Sat, 12 Mar 2022 21:05:15: Sorting the merged items by negative selection... 
+INFO  @ Sat, 12 Mar 2022 21:05:15: Loading top 10 genes from HEK_TP1vsTP2.gene.low.txt: FIP1L1control,CPSF1control,HNRNPH1control,NCBP1control,NUDT21control,controlPABPN1,SRSF11control,AQRcontrol,CPSF2control,controlEXOSC2 
+DEBUG @ Sat, 12 Mar 2022 21:05:15: Column index:3 
+INFO  @ Sat, 12 Mar 2022 21:05:16: Loading top 10 genes from HEK_TP1vsTP2.gene.high.txt: controlcontrol,PAN2control,controlRBM27,CDK10control,CDK8control,ERCC2control,CD81control,controlC17orf85,DXOcontrol,controlBRCA2 
+DEBUG @ Sat, 12 Mar 2022 21:05:16: Column index:9 
+INFO  @ Sat, 12 Mar 2022 21:05:17: Running command: rm HEK_TP1vsTP2.plow.txt 
+INFO  @ Sat, 12 Mar 2022 21:05:17: Running command: rm HEK_TP1vsTP2.phigh.txt 
+INFO  @ Sat, 12 Mar 2022 21:05:17: Running command: rm HEK_TP1vsTP2.gene.low.txt 
+INFO  @ Sat, 12 Mar 2022 21:05:17: Running command: rm HEK_TP1vsTP2.gene.high.txt 
