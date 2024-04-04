@@ -20,7 +20,7 @@ sg_dict <- sg_dict %>%
   left_join(guide_anno, by = c("sgrna_pos1", "sgrna_pos2"))
 
 #read in MAGeCK sgRNA summary
-infile <- "T98G_TP1vsTP3"
+infile <- "RPE_TP1vsTP3"
 sgrna_summary <- read_tsv(str_c("../MAGeCK Analyses/", infile, ".sgrna_summary.txt"))
 
 #wrangle MAGeCK file to include sequences and keep only LFCs
@@ -170,11 +170,11 @@ pairs_observed_expected <- pairs_observed_expected %>%
 
 #Start working on false negative calculation ----
 threshold <- -1.542
-essential_crRNAs_spot2 <- single_phenotypes %>%
-  filter(ctrl == "ctrl1" & LFC < threshold) %>%
+
+essential_crRNAs_spot2 <- pairs_observed_expected %>%
+  filter(spot2_ctrl_LFC < threshold) %>%
   select(sgrna_pos2) %>%
   unique()
-
 
 expected_bufferings <- pairs_observed_expected %>%
   filter(T_gate == "yes") %>%
